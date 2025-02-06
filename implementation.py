@@ -78,7 +78,6 @@ class Noughts_and_Crosses_Verifier:
 
         return None # No result found
 
-
 def run_tests():
     """Runs a set of test cases to verify the correctness of the game verifier."""
     test_cases = [
