@@ -4,21 +4,21 @@
 This script implements a noughts and cross game verifier in Python. It evaluates the state if a given NXN noughts and crosses grid to determine whether:
 -   The player using "X" has won
 -   The player using "O" has won
--   The game has ended in a draw with neither side winning
+-   The game ended in a draw with neither side winning
 
-    As per isntruction this script is designed to be used as part of a larger application that manages the game session for so it doesn't handle:
+    As per instruction this script is designed to be used as part of a larger application that manages the game session for so it doesn't handle:
         -   player turns
         -   move validation
         -   game flow
     It simply verifies the current state of the board
 """
 
-class TicTacToeVerifier:
+class Noughts_and_Crosses_Verifier:
     def __init__(self, grid, size=3):
         """
         Initialises the game verifier with a NXN grid(default 3x3).
         
-        :paramater grid: List of lists representing the Tic-Tac-Toe board.
+        :paramater grid: List of lists representing the Noughts and Crosses board.
         :paramater size: The size of the grid (default: 3 for a 3x3 game).
         """
 
@@ -109,8 +109,8 @@ def run_tests():
     
     for i, (grid, expected) in enumerate(test_cases, 1):
         try:
-            from implementation import TicTacToeVerifier  # Updated import statement
-            game = TicTacToeVerifier(grid)
+            from implementation import Noughts_and_Crosses_Verifier  
+            game = Noughts_and_Crosses_Verifier(grid)
             result = game.check_winner()
             assert result == expected, f"Test {i} failed: expected {expected}, got {result}"
             print(f"Test {i} passed: {result}")
